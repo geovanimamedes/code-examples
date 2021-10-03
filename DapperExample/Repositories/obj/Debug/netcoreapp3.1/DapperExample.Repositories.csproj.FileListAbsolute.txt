@@ -1,0 +1,14 @@
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Borders.dll
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Shared.dll
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.csprojAssemblyReference.cache
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.AssemblyInfoInputs.cache
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.AssemblyInfo.cs
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.csproj.CoreCompileInputs.cache
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Repositories.deps.json
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Repositories.dll
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Repositories.pdb
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Borders.pdb
+C:\Projetos\Git\code-examples\DapperExample\Repositories\bin\Debug\netcoreapp3.1\DapperExample.Shared.pdb
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.csproj.CopyComplete
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.dll
+C:\Projetos\Git\code-examples\DapperExample\Repositories\obj\Debug\netcoreapp3.1\DapperExample.Repositories.pdb

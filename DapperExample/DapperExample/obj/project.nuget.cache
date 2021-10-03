@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "K1zpuwfOijFsxc6UJq/eXJDVbdJccMuJQiLKsH327F0QVvDwCr8JzGM4QQGFLtHb2qE2WDvN05IYf2oScMVjxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\Git\\code-examples\\DapperExample\\DapperExample\\DapperExample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Geovani S. Mamedes\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\Geovani S. Mamedes\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

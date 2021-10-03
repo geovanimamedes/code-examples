@@ -1,0 +1,9 @@
+C:\Projetos\Git\code-examples\DapperExample\Shared\bin\Debug\netcoreapp3.1\DapperExample.Shared.deps.json
+C:\Projetos\Git\code-examples\DapperExample\Shared\bin\Debug\netcoreapp3.1\DapperExample.Shared.dll
+C:\Projetos\Git\code-examples\DapperExample\Shared\bin\Debug\netcoreapp3.1\DapperExample.Shared.pdb
+C:\Projetos\Git\code-examples\DapperExample\Shared\obj\Debug\netcoreapp3.1\DapperExample.Shared.csprojAssemblyReference.cache
+C:\Projetos\Git\code-examples\DapperExample\Shared\obj\Debug\netcoreapp3.1\DapperExample.Shared.csproj.CoreCompileInputs.cache
+C:\Projetos\Git\code-examples\DapperExample\Shared\obj\Debug\netcoreapp3.1\DapperExample.Shared.AssemblyInfoInputs.cache
+C:\Projetos\Git\code-examples\DapperExample\Shared\obj\Debug\netcoreapp3.1\DapperExample.Shared.AssemblyInfo.cs
+C:\Projetos\Git\code-examples\DapperExample\Shared\obj\Debug\netcoreapp3.1\DapperExample.Shared.dll
+C:\Projetos\Git\code-examples\DapperExample\Shared\obj\Debug\netcoreapp3.1\DapperExample.Shared.pdb

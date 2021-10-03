@@ -1,0 +1,9 @@
+C:\Projetos\Git\code-examples\DapperExample\Borders\obj\Debug\netcoreapp3.1\DapperExample.Borders.csprojAssemblyReference.cache
+C:\Projetos\Git\code-examples\DapperExample\Borders\obj\Debug\netcoreapp3.1\DapperExample.Borders.csproj.CoreCompileInputs.cache
+C:\Projetos\Git\code-examples\DapperExample\Borders\obj\Debug\netcoreapp3.1\DapperExample.Borders.AssemblyInfoInputs.cache
+C:\Projetos\Git\code-examples\DapperExample\Borders\obj\Debug\netcoreapp3.1\DapperExample.Borders.AssemblyInfo.cs
+C:\Projetos\Git\code-examples\DapperExample\Borders\bin\Debug\netcoreapp3.1\DapperExample.Borders.deps.json
+C:\Projetos\Git\code-examples\DapperExample\Borders\bin\Debug\netcoreapp3.1\DapperExample.Borders.dll
+C:\Projetos\Git\code-examples\DapperExample\Borders\bin\Debug\netcoreapp3.1\DapperExample.Borders.pdb
+C:\Projetos\Git\code-examples\DapperExample\Borders\obj\Debug\netcoreapp3.1\DapperExample.Borders.dll
+C:\Projetos\Git\code-examples\DapperExample\Borders\obj\Debug\netcoreapp3.1\DapperExample.Borders.pdb
