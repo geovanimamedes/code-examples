@@ -1,0 +1,31 @@
+GET: calculos/templates
+GET: calculos/templates/{id_template}
+GET: calculos/templates?id_grupo_calculo=1
+POST: calculos/templates
+DELETE: calculos/solicitacoes/{id_solicitacao}
+
+GET: calculos/solicitacoes/{id_solicitacao}
+GET: calculos/solicitacoes?chave_busca="098737451"
+POST: calculos/solicitacoes
+PUT: calculos/solicitacoes/{id_solicitacao}
+DELETE: calculos/solicitacoes/{id_solicitacao}
+
+GET: calculos/solicitacoes/{id_solicitacao}/informacoes-complementares
+POST: calculos/solicitacoes/{id_solicitacao}/informacoes-complementares
+PUT: calculos/solicitacoes/{id_solicitacao}/informacoes-complementares/{id_info_compl_solicitacao}
+DELETE: calculos/solicitacoes/{id_solicitacao}/informacoes-complementares/{id_info_compl_solicitacao}
+
+POST: calculos/solicitacoes/{id_solicitacao}/calcular
+GET: calculos/solicitacoes/{id_solicitacao}/resultados
+
+GET: calculos/solicitacoes/{id_solicitacao}/documentos
+GET: calculos/solicitacoes/documentos/{id_documento}
+
+GET: calculos/solicitacoes/{id_solicitacao}/documentos/informacoes-complementares-documento/
+POST: calculos/solicitacoes/{id_solicitacao}/informacoes-complementares-documento?id_template_documento="123"
+PUT: calculos/solicitacoes/{id_solicitacao}/informacoes-complementares-documento//{id_info_compl_solicitacao}
+DELETE: calculos/solicitacoes/{id_solicitacao}/informacoesComplementares/{id_info_compl_solicitacao}
+
+POST: calculos/solicitacoes/{id_solicitacao}/liberarCalculo
+
+GET: 
