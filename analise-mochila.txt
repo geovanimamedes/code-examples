@@ -1,0 +1,106 @@
+**CONTEXTO**
+
+Somos do time de arquitetura da comunidade jurídica do banco Itaú. Fomos envolvidos em uma discussão sobre qual squad deveria assumir a responsabilidade por uma “mochila” atualmente alocada na squad de **Cadastros Iniciais**, que entende que esse escopo não deveria mais permanecer sob sua responsabilidade.
+
+Essa mochila contempla componentes implementados em um workflow no Salesforce que, para um processo jurídico que é cadastrado na esteira, realizam a chamada ao sistema **Distribuidor de Escritórios** que faz parte do produto **Gestão de Escritórios** e persistem o resultado — ou seja, o escritório responsável pelo processo jurídico — no próprio Salesforce. Esse produto **Gestão de Escritórios** é da squad **Comunicações Externas** também faz parte da esteira jurídica, e são responsáveis por todo o relacionamento com os escritórios credenciados. Ou seja, eles são o Golden Source dos dados de escritório, inclusive desse vínculo com os processos jurídicos e os escritórios.
+
+---
+
+**HISTÓRICO**
+
+A comunidade passou recentemente por reformulações tanto na **solução** quanto na **topologia**.
+
+**Solução:**
+Inicialmente, havia workflows legados segregados por natureza jurídica:
+
+* Trabalhista (One Trabalhista e sistema NM)
+* Cível (One Cível e sistema BJ)
+
+Esses workflows centralizavam o core das esteiras, e os produtos específicos se integravam a eles.
+
+Posteriormente, surgiu uma proposta de modernização, migrando esses workflows para o Salesforce, unificando os fluxos cível e trabalhista. A partir disso, diversos produtos passaram a construir diretamente dentro dessa plataforma.
+
+Mais recentemente, houve uma nova mudança de diretriz arquitetural, abandonando o conceito de workflow centralizado em favor de uma abordagem baseada em eventos. Nesse modelo:
+
+* Os produtos passam a gerar e consumir eventos entre si
+* A arquitetura se aproxima mais de uma **coreografia** do que de uma **orquestração**
+* Os dados deixam de ser centralizados em workflows e passam a residir nos próprios produtos de origem
+
+Entretanto, ainda existem diversas soluções em produção construídas no modelo anterior, o que tem gerado algumas disfunções.
+
+---
+
+**Topologia:**
+Anteriormente, a organização era estruturada em verticais:
+
+* Capturas eletrônicas (cross entre cível e trabalhista)
+* Esteira Cível
+* Esteira Trabalhista
+
+Dentro dessas verticais, existiam produtos específicos e também produtos mais genéricos, como:
+
+* Capturas → Cadastro
+* Cível → Workflow Cível
+* Trabalhista → Workflow Trabalhista
+
+Após a reformulação, a visão de produtos genéricos foi descontinuada, permanecendo apenas os produtos específicos. No entanto, devido ao legado em produção, foram criadas squads de **Run Ops**, responsáveis por centralizar a sustentação dessas soluções (incluindo Salesforce, tratado como novo legado), enquanto as demais squads focariam na modernização e evolução da arquitetura.
+
+O problema é que essa estratégia não foi aplicada de forma homogênea entre as verticais. Como resultado:
+
+* Em alguns casos, as squads de Run Ops concentram de fato a sustentação
+* Em outros, as squads de produto acumulam tanto sustentação quanto evolução
+* E, em alguns cenários, há divisão pouco clara de responsabilidades
+
+Um exemplo importante é a Run Ops criada para a antiga vertical de capturas, que ao invés de incorporar todos os assuntos legados da vertical de capturas, ficou somente com a parte de capturas externas, fazendo com que toda a parte de cadastro ficasse sem Run Ops.
+
+---
+
+**DETALHES DA MOCHILA**
+
+A solução em discussão foi construída sob a estrutura anterior de **cadastro**. Na visão atual de arquitetura, esse tipo de responsabilidade não está mais claramente associado a esse domínio, gerando dúvidas sobre sua alocação correta.
+
+---
+
+**PONTOS DE VISTA DAS SQUADS**
+
+**Cadastro Inicial:**
+Defende que o dado de “escritório responsável”, definido na distribuição, não faz parte do escopo do produto de cadastro inicial (cível e trabalhista). Entende que essa responsabilidade deveria estar no cadastro qualificado ou no distribuidor de escritórios.
+
+Por outro lado, reconhece que o cadastro qualificado trabalhista está sob sua responsabilidade. Assim, aceita manter a chamada ao distribuidor e a persistência desse dado no workflow para o contexto trabalhista, incluindo a sustentação (mesmo do legado).
+
+---
+
+**Laudo e Captura de Provas (1):**
+Defende que seu escopo está restrito ao cadastro qualificado cível e que o dado de escritório responsável não faz parte das informações que consome ou alimenta no fluxo. Afirma não haver necessidade desse dado em seu contexto, embora reconheça que a sustentação do cadastro qualificado cível é de sua responsabilidade.
+
+---
+
+**Comunicações Externas:**
+Defende que seu papel é ser acionado por outros produtos, definir o escritório responsável (cível ou trabalhista) e retornar essa informação ao solicitante.
+
+A persistência do dado deve ser responsabilidade do produto consumidor. Caso contrário, haveria perda de proximidade com o fluxo de negócio, o que poderia gerar lacunas na evolução futura.
+
+Na visão de arquitetura, o distribuidor é o **golden source** do dado, porém apenas em sua própria base — não em workflows externos.
+
+---
+
+**Run Ops (Cível):**
+Defende que não realiza sustentação de workflows em Salesforce, apenas dos workflows legados (BJ e One Cível). Além disso, não possui capacidade técnica (ex.: desenvolvedores) para esse tipo de atuação e não sustenta soluções de cadastro.
+
+Argumenta que, caso fosse necessário alocar essa responsabilidade em Run Ops, faria mais sentido no contexto trabalhista, onde já há sustentação de Salesforce.
+
+---
+
+**Run Ops (Trabalhista):**
+Defende que sua atuação está restrita à sustentação de workflows legados (incluindo salesforce, mas excluindo peças de cadastro). Destaca que a mochila em questão é predominantemente cível e, portanto, não deveria ser direcionada para sua squad. Além disso, aponta já possuir alta diversidade de responsabilidades.
+
+---
+
+**Run Ops (Capturas):**
+Defende que, apesar de estar na vertical de cadastro, sua atuação está limitada à sustentação de capturas externas, não contemplando cadastro inicial ou cadastro qualificado.
+
+---
+
+**QUESTÃO**
+
+Diante do contexto apresentado, qual squad faz mais sentido assumir a responsabilidade por essa mochila? Considere na sua análise, caso seja o melhor caminho, a criação de novas squads.
